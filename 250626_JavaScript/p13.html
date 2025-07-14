@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    function qj(){  //作用域在函数体内
+        let x = 1;
+        function qj2(){
+            let x = 'A';
+            console.log('inner='+x);
+        }
+        console.log('outer='+x);
+        qj2();
+    }
+    qj()
+
+    //唯一全局变量
+    var KunangApp = { };
+    KunangApp.nmae = 'kuangshen';
+    KunangApp.add = function(a,b){
+        return a+b;
+    }
+
+    //let解决局部作用域冲突
+    function aaa(){
+        for(let i=0; i<100; i++){ //用var定义会输出101
+            console.log(i)
+        }
+        console.log(i+1);
+    }
+
+    //const常量关键字
+
+
+
+</script>
+
+    
+</body>
+</html>

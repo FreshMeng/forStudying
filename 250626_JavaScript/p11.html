@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        'use strict'
+        //迭代 for...of/in 值/下标
+        var arr = [3,4,5];
+        arr.name = "213";
+        for (var x of arr){
+            console.log(x)
+        }
+        for (let x in arr){
+            console.log(x)
+        }
+
+        var map = new Map([["tom",100],["jack",90],["haha",80]]);
+        for (let x of map){
+            console.log(x)
+        }
+
+        var set = new Set([5,6,7]);
+        for (let x of set){
+            console.log(x)
+        }
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

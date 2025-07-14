@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="js">JavaScript</p>
+    <div id="list">
+        <p id="se">JavaSE</p>
+        <p id="ee">JavaEE</p>
+        <p id="me">JavaME</p>
+    </div>
+
+
+    <script>
+        //追加操作插入节点
+
+        //已存在的节点
+        let js = document.getElementById('js');
+        let list = document.getElementById('list');
+        list.appendChild(js);  
+
+        //创建新的节点
+        let newP = document.createElement('p');
+        //newP.setAttribute('id','newP');
+        newP.id = 'nweP';
+        newP.innerText = 'Hello,kuangshen';
+        list.appendChild(newP);
+
+        //创建一个标签节点
+        let myJS = document.createElement('script');
+        myJS.setAttribute('type','text/javascript');
+        list.append(myJS);
+
+        //body
+        let myStyle = document.createElement('style');
+        myStyle.setAttribute('type','text/css');
+        myStyle.innerHTML = 'body{background-color: chartreuse;}';
+        document.getElementsByTagName('head')[0].appendChild(myStyle);
+
+        //插入到前面
+        let ee = document.getElementById('ee');
+        list.insertBefore(js,ee);
+    </script>
+
+
+
+</body>
+</html>

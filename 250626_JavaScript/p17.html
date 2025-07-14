@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let user = {
+            name: "qinjiang",
+            age: 3,
+            run: function(){
+                console.log(this.name + " run...");
+            }
+        };
+
+        let xiaoming = {
+            name: "xiaoming"
+        };
+        //原型
+        xiaoming.__proto__ = user;
+        
+    </script>
+    
+</body>
+</html>

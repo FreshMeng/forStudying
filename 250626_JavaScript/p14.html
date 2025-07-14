@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //this指向使用它的对象
+        function getAge(){
+            let now = new Date().getFullYear();
+            return now-this.birth;
+        }
+        let kuangshen = {
+            name: '秦将',
+            birth: 2020,
+            // age: function(){
+            //     let now = new Date().getFullYear();
+            //     return now-this.birth;  
+            // }
+            age: getAge
+        }
+        console.log(kuangshen.age())
+
+        //apply()修改this的指向
+        console.log(getAge.apply(kuangshen,[]));
+    </script>
+    
+</body>
+</html>

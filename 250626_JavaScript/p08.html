@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        'use strict';
+        //对象
+        let person = {
+            name: "kuangshen",
+            age: 3,
+            email: "12321@qq.com",
+            score: 0
+        };
+        console.log(person.name);
+        person.name = "qinjiang";
+        delete person.name;  //动态删减属性
+        person.haha = "haha";  //动态增加属性
+        //判断属性值是否在对象中
+        'age' in person;  //所有键的都是字符串，值是任意对象
+        'toString' in person;  //in包含父类的属性
+        person.hasOwnProperty('toString');  //不包含父类
+        
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        "use strict"
+        function abs(x){
+            for (let x of arguments){ //传递进来的所有参数
+                console.log(x);
+            }
+            if (typeof x!=="number"){  //手动抛出异常
+                throw 'Not a number';
+            }
+            if(x>=0){
+                return x;
+            }else{
+                return -x;
+            }
+        }
+        console.log(abs(-10))
+
+        //es6，多余的参数...rest
+        function aaa(a,b,...rest){
+            console.log("a=>"+a);
+            console.log("b=>"+b);
+            console.log(rest);
+        }
+        console.log(aaa(1));
+        console.log(aaa(1,2));
+        console.log(aaa(1,3,1,5474,897));
+
+        // var abs = function(x){}
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

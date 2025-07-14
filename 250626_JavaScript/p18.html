@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //定义类
+        function Student(name){
+            this.name = name;
+        }
+        //新增方法
+        Student.prototype.hello = function(){
+            alert('Hello')
+        }
+
+        //ES6
+        class Student2{
+            constructor(name){
+                this.name = name;
+            }
+
+            hello(){
+                alert('hello')
+            }
+        }
+
+        let xiaoming = new Student2("xiaoming")
+
+        //继承
+        class xiaoS extends Student2{
+            constructor(name,grade){
+                super(name);
+                this.grade = grade;
+            }
+            myGrade(){
+                alert('我是一名小学生')
+            }
+        }
+        let xiaohong = new xiaoS("xiaohong",1);
+
+    </script>    
+    
+</body>
+</html>

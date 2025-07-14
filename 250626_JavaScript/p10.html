@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        'use strict'
+        //Map
+        let map = new Map([['tom',100],['jack',90],['haha',80]]);
+        let name = map.get('tom');  //通过key获得value
+        map.set('admin',456);
+        console.log(name);
+        map.delete('tom');
+        //Set不重复
+        let set = new Set([1,1,1,3]);
+        set.add(2);
+        set.delete(1);
+        console.log(set.has(3))
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
